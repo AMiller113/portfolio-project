@@ -12,7 +12,7 @@ class Blog(models.Model):
             if i > len(self.blog_post_text)//3 and char is '.' or char is '/r/n':
                 index = i
                 break
-        return self.blog_post_text[:index] + '.......'
+        return self.blog_post_text[:index] + ' (continued....)'
 
     def pub_date_alt(self):
         return self.publication_date.strftime('%b %e, %Y')
